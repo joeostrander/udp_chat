@@ -24,7 +24,7 @@ namespace udp_chat
             _socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             _socket.SetSocketOption(SocketOptionLevel.IP, SocketOptionName.ReuseAddress, true);
             //_socket.Bind(new IPEndPoint(IPAddress.Parse(address), port));
-            _socket.Bind(new IPEndPoint(IPAddress.Any, 28000));
+            _socket.Bind(new IPEndPoint(IPAddress.Any, port));
             Receive();
         }
 
