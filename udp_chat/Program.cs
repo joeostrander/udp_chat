@@ -53,11 +53,11 @@ namespace udp_chat
             }
 
             UDPSocket s = new UDPSocket();
-            s.Server(server_ip, port_server);
+            s.Server(port_server);
             s.debug = false;
 
             UDPSocket c = new UDPSocket();
-            c.Client("127.0.0.1", port_client);
+            c.Client(server_ip, port_client);
             c.debug = false;
 
             while (true)
